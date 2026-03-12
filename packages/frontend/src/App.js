@@ -62,16 +62,15 @@ function App() {
           maxWidth="md" 
           sx={{ 
             mt: 4,
-            height: 'calc(100vh - 120px)', 
+            pb: 4,
             display: 'flex', 
             flexDirection: 'column',
-            overflow: 'hidden'
           }}
         >
           <Box sx={{ mb: 2, flexShrink: 0 }}>
             <TaskForm onSave={handleSave} initialTask={editingTask} />
           </Box>
-          <Box sx={{ flexGrow: 1, minHeight: 0, overflow: 'hidden' }}>
+          <Box sx={{ flexGrow: 1 }}>
             <TaskList key={refreshKey} onEdit={setEditingTask} />
           </Box>
         </Container>

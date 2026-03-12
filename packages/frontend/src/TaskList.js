@@ -78,8 +78,7 @@ function TaskList({ onEdit }) {
         mt: 3, 
         p: 2, 
         width: '100%', 
-        maxHeight: '60vh', 
-        overflow: 'auto',
+
         background: 'rgba(255, 255, 255, 0.95)',
         backdropFilter: 'blur(10px)',
         borderRadius: 3,
@@ -217,6 +216,20 @@ function TaskList({ onEdit }) {
                     '& .MuiChip-icon': {
                       color: 'white'
                     }
+                  }}
+                />
+              )}
+              {task.priority && (
+                <Chip
+                  label={task.priority}
+                  size="small"
+                  data-testid={`priority-badge-${task.id}`}
+                  sx={{
+                    height: 20,
+                    fontSize: '0.7rem',
+                    fontWeight: 700,
+                    background: `var(--priority-${(task.priority || 'p3').toLowerCase()}-color)`,
+                    color: 'white',
                   }}
                 />
               )}
