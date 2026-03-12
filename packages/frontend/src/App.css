@@ -1,3 +1,32 @@
+:root {
+  --priority-p1-color: #d32f2f;
+  --priority-p2-color: #ed6c02;
+  --priority-p3-color: #9e9e9e;
+  --priority-btn-unselected: #7a7a7a;
+  --priority-btn-selected: #07F2E6;
+}
+
+/* Priority toggle button states */
+.priority-btn-P1,
+.priority-btn-P2,
+.priority-btn-P3 {
+  background-color: var(--priority-btn-unselected) !important;
+  border-color: #fff !important;
+  color: #fff !important;
+}
+
+.priority-btn-P1:hover,
+.priority-btn-P1.Mui-selected,
+.priority-btn-P2:hover,
+.priority-btn-P2.Mui-selected,
+.priority-btn-P3:hover,
+.priority-btn-P3.Mui-selected {
+  background-color: var(--priority-btn-selected) !important;
+  border-color: #fff !important;
+  color: #fff !important;
+  z-index: 0 !important;
+}
+
 .App {
   text-align: center;
   max-width: 800px;
